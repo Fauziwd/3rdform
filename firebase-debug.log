@@ -1,0 +1,112 @@
+[debug] [2023-08-02T12:40:40.739Z] ----------------------------------------------------------------------
+[debug] [2023-08-02T12:40:40.743Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\lenovo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-08-02T12:40:40.744Z] CLI Version:   12.4.6
+[debug] [2023-08-02T12:40:40.744Z] Platform:      win32
+[debug] [2023-08-02T12:40:40.745Z] Node Version:  v19.4.0
+[debug] [2023-08-02T12:40:40.745Z] Time:          Wed Aug 02 2023 19:40:40 GMT+0700 (Indochina Time)
+[debug] [2023-08-02T12:40:40.745Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-02T12:40:40.841Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-02T12:40:40.842Z] > authorizing via signed-in user (dfauzi250@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\react\3rdform
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-08-02T12:44:08.089Z] Using project from CLI flag: kenangan-wonk-njero
+[debug] [2023-08-02T12:44:08.096Z] > refreshing access token with scopes: []
+[debug] [2023-08-02T12:44:08.104Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-08-02T12:44:08.106Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-08-02T12:44:08.831Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-08-02T12:44:08.832Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-08-02T12:44:08.855Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/kenangan-wonk-njero [none]
+[debug] [2023-08-02T12:44:09.965Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/kenangan-wonk-njero 200
+[debug] [2023-08-02T12:44:09.966Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/kenangan-wonk-njero {"projectId":"kenangan-wonk-njero","projectNumber":"689664119068","displayName":"Kenangan Wonk Njero","name":"projects/kenangan-wonk-njero","resources":{"hostingSite":"kenangan-wonk-njero"},"state":"ACTIVE","etag":"1_c0f084ab-a6ad-4720-9557-d32e0ccf82d3"}
+[info] i  Using project kenangan-wonk-njero (Kenangan Wonk Njero) 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at D:\react\3rdform 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=616037801&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-08-02T12:44:11.910Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2023-08-02T12:44:11.911Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2023-08-02T12:44:12.620Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2023-08-02T12:44:12.621Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2023-08-02T12:44:12.636Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2023-08-02T12:44:13.837Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2023-08-02T12:44:13.837Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Fauziwd","id":115517208,"node_id":"U_kgDOBuKnGA","avatar_url":"https://avatars.githubusercontent.com/u/115517208?v=4","gravatar_id":"","url":"https://api.github.com/users/Fauziwd","html_url":"https://github.com/Fauziwd","followers_url":"https://api.github.com/users/Fauziwd/followers","following_url":"https://api.github.com/users/Fauziwd/following{/other_user}","gists_url":"https://api.github.com/users/Fauziwd/gists{/gist_id}","starred_url":"https://api.github.com/users/Fauziwd/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Fauziwd/subscriptions","organizations_url":"https://api.github.com/users/Fauziwd/orgs","repos_url":"https://api.github.com/users/Fauziwd/repos","events_url":"https://api.github.com/users/Fauziwd/events{/privacy}","received_events_url":"https://api.github.com/users/Fauziwd/received_events","type":"User","site_admin":false,"name":"Fauziiwd","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":"Programmer Pemula, masih perlu bimbingan orang tua","twitter_username":"fauziiwd","public_repos":25,"public_gists":0,"followers":0,"following":2,"created_at":"2022-10-11T02:31:48Z","updated_at":"2023-04-19T00:06:01Z","private_gists":0,"total_private_repos":1,"owned_private_repos":1,"disk_usage":185944,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as Fauziwd 
+[info] 
+[debug] [2023-08-02T12:56:49.380Z] >>> [apiv2][query] GET https://api.github.com/repos/Fauziwd/3rdform/actions/secrets/public-key type=owner
+[debug] [2023-08-02T12:56:50.082Z] <<< [apiv2][status] GET https://api.github.com/repos/Fauziwd/3rdform/actions/secrets/public-key 404
+[debug] [2023-08-02T12:56:50.082Z] <<< [apiv2][body] GET https://api.github.com/repos/Fauziwd/3rdform/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/actions/secrets#get-a-repository-public-key"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-08-02T12:57:02.017Z] >>> [apiv2][query] GET https://api.github.com/repos/Fauziwd/3rdform/actions/secrets/public-key type=owner
+[debug] [2023-08-02T12:57:03.063Z] <<< [apiv2][status] GET https://api.github.com/repos/Fauziwd/3rdform/actions/secrets/public-key 404
+[debug] [2023-08-02T12:57:03.063Z] <<< [apiv2][body] GET https://api.github.com/repos/Fauziwd/3rdform/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/actions/secrets#get-a-repository-public-key"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-08-02T12:59:08.275Z] >>> [apiv2][query] GET https://api.github.com/repos/Fauziwd/3rdform/actions/secrets/public-key type=owner
+[debug] [2023-08-02T12:59:09.060Z] <<< [apiv2][status] GET https://api.github.com/repos/Fauziwd/3rdform/actions/secrets/public-key 404
+[debug] [2023-08-02T12:59:09.060Z] <<< [apiv2][body] GET https://api.github.com/repos/Fauziwd/3rdform/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/actions/secrets#get-a-repository-public-key"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-08-02T13:28:40.697Z] >>> [apiv2][query] GET https://api.github.com/repos/Fauziwd/actions/secrets/public-key type=owner
+[debug] [2023-08-02T13:28:41.538Z] <<< [apiv2][status] GET https://api.github.com/repos/Fauziwd/actions/secrets/public-key 404
+[debug] [2023-08-02T13:28:41.538Z] <<< [apiv2][body] GET https://api.github.com/repos/Fauziwd/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-08-02T13:28:43.799Z] >>> [apiv2][query] GET https://api.github.com/repos/Fauziwd/actions/secrets/public-key type=owner
+[debug] [2023-08-02T13:28:44.310Z] <<< [apiv2][status] GET https://api.github.com/repos/Fauziwd/actions/secrets/public-key 404
+[debug] [2023-08-02T13:28:44.311Z] <<< [apiv2][body] GET https://api.github.com/repos/Fauziwd/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
