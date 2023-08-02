@@ -123,6 +123,8 @@ const Sidebar = () => {
               <a
                 href="/"
                 class="flex items-center p-2  rounded-lg dark:text-white text-white hover:bg-gray-800 dark:hover:bg-gray-700"
+                disabled 
+                style={{ pointerEvents: 'none' }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -295,7 +297,7 @@ const Sidebar = () => {
                 <li>
                   <button
                     type="button"
-                    className="flex items-center w-full p-2  transition duration-75 rounded-lg pl-11 group hover:bg-red-100 dark:text-white dark:hover:bg-red-300"
+                    className="flex items-center w-full p-2  transition duration-75 rounded-lg pl-11 group text-white hover:bg-red-100 dark:text-white dark:hover:bg-red-300"
                     onClick={enableSakuraFlowerMode}
                   >
                     <svg

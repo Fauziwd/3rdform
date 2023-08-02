@@ -128,16 +128,16 @@ const FormAbsensi = () => {
   };
 
   const handleOpenWhatsApp = (selectedNomor) => {
-    // Membuat pesan dalam format tabel dari data JSON yang telah di-submit
     const pesanTabel = formatPesanTabel(JSON.parse(submittedData));
-
-    // Membuat URL link dengan format pesan WhatsApp
     const formattedPesan = encodeURIComponent(pesanTabel);
-    const url = `https://wa.me/${selectedNomor}?text=${formattedPesan}`;
-
+  
+    // Ganti 'sendMessage' dengan 'send' jika menggunakan API WhatsApp
+    const url = `https://api.whatsapp.com/send?phone=${selectedNomor}&text=${formattedPesan}`;
+  
     // Buka link WhatsApp menggunakan window.location.href
     window.location.href = url;
   };
+  
 
   // Fungsi untuk mengubah data JSON menjadi format pesan dalam tabel
   const formatPesanTabel = (data) => {
@@ -273,6 +273,14 @@ const FormAbsensi = () => {
               <option value="">Pilih Nomor Orang</option>
               <option value="6281234567890">Adam</option>
               <option value="6285157033316">Fauzi</option>
+              <option value="6285706156524">Hilmi</option>
+              <option value="6281291863389">Khottob</option>
+              <option value="6282115969632">Luqman</option>
+              <option value="6289512628347">Misbah</option>
+              <option value="6285156208077">Nabil</option>
+              <option value="6287739673533">Umar</option>
+              <option value="967770468112">Zahid</option>
+              <option value="6281233757661">Zaky</option>
               {/* Tambahkan opsi sesuai dengan nomor-nomor yang ingin Anda tampilkan */}
             </select>
           </div>

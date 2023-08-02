@@ -97,7 +97,7 @@ function App() {
 
 
       <div className="relative overflow-x-auto shadow-lg sm:rounded-lg p-3 dark:bg-gray-900">
-        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 shadow-xl mb-5">
+        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 shadow-xl mb-20">
           <thead className="text-xs uppercase rounded-lg  dark:text-white  bg-gray-300 dark:bg-gray-800 text-gray-900">
             <tr>
               <th scope="col" className="rounded-tl-lg px-3 py-3 text-left">

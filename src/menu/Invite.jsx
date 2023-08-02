@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'; 
+import 'sweetalert2/dist/sweetalert2.min.css';
 import Sidebar from '../layout/Navbar';
 import Navbar from "../layout/Sidebar";
 import BottomNav from "../layout/BottomNav";
@@ -24,7 +26,8 @@ function Invite() {
     console.log( company);
   
     // Lakukan sesuatu dengan data yang telah diisi (misalnya, kirim data ke server)
-    // ...
+    // Tampilkan SweetAlert
+
   
     // Setelah submit, Anda bisa mereset nilai-nilai state form
     setNama("");
@@ -35,12 +38,26 @@ function Invite() {
     setCompany("");
   };
   
+  // Fungsi untuk menampilkan SweetAlert saat halaman dimuat
+  const showDevelopmentAlert = () => {
+    Swal.fire({
+      icon: 'info',
+      title: 'Halaman Dalam Pengembangan',
+      text: 'Maaf, halaman ini sedang dalam tahap pengembangan, anda dapat mencoba fitur lain yang tersedia saat',
+      confirmButtonText: 'Tutup'
+    });
+  };
+
+  // Gunakan useEffect untuk memanggil fungsi saat halaman selesai dimuat (reload)
+  useEffect(() => {
+    showDevelopmentAlert();
+  }, []);
 
   return (
     <>
     <Sidebar />
       <Navbar />
-    <div className="container mx-auto mt-10">
+    <div className="container mx-auto dark:bg-gray-800 h-screen">
       <form class="p-6" onSubmit={handleSubmit}>
       <div class="relative z-0 w-full mb-6 group">
   <input
@@ -50,6 +67,7 @@ function Invite() {
     className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
     placeholder=" "
     required
+    disabled
   />
   <label
     htmlFor="floating_email" // Hubungkan "htmlFor" dengan "id" pada input yang sesuai
@@ -66,6 +84,7 @@ function Invite() {
             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
             required
+            disabled
           />
           <label
             for="floating_password"
@@ -82,6 +101,7 @@ function Invite() {
             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
             required
+            disabled
           />
           <label
             for="floating_repeat_password"
@@ -99,6 +119,7 @@ function Invite() {
               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
+              disabled
             />
             <label
               for="floating_first_name"
@@ -115,6 +136,7 @@ function Invite() {
               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
+              disabled
             />
             <label
               for="floating_last_name"
@@ -133,6 +155,7 @@ function Invite() {
               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
+              disabled
             />
             <label
               for="floating_phone"
@@ -149,6 +172,7 @@ function Invite() {
               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
+              disabled
             />
             <label
               for="floating_company"
@@ -164,6 +188,7 @@ function Invite() {
           <button
             type="submit"
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            disabled
           >
             Submit
           </button>
